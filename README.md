@@ -13,3 +13,4 @@
 * Boiler-Plate & Connect MongoDB
 * Getting The MoiveDB API
 * Landing Page _ Main Image
+* Landing Page _ Grid Components
