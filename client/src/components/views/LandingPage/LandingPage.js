@@ -2,6 +2,8 @@ import React, {useEffect,useState} from 'react'
 import { FaCode } from "react-icons/fa";
 import {API_URL, API_KEY, IMAGE_BASE_URL} from '../../Config';
 import MainImage from './Sections/MainImage';
+import GridCards from '../commons/GridCards';
+import {Row} from 'antd';
 
 function LandingPage() {
 
@@ -14,12 +16,8 @@ function LandingPage() {
         fetch(endpoint)
         .then(response => response.json())
         .then(response => {
-            
-            console.log(response)
-
-            setMoives([response.results])
+            setMoives([...response.results])
             setMainMovieImage(response.results[0])
-        
         })
 
     }, [])
@@ -30,7 +28,7 @@ function LandingPage() {
             {/* Main Image */}
         {MainMovieImage &&
         <MainImage 
-            image={`${IMAGE_BASE_URL}/w1280${MainMovieImage.backdrop_path}`}
+            image={`${IMAGE_BASE_URL}w1280${MainMovieImage.backdrop_path}`}
             title={MainMovieImage.original_title}
             text={MainMovieImage.overview}
         />
@@ -44,6 +42,19 @@ function LandingPage() {
                 <hr />
 
                 {/* Movie Grid Cards */}
+            
+                <Row  gutter={[16,16]}>
+                {Moives && Moives.map((movie, index) => (
+                    <React.Fragment key={index}>
+                         <GridCards 
+                            image={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
+                            movieId={movie.id}
+                            movieName={movie.original_title}
+                         />
+                    </React.Fragment>
+                ))}
+                   
+                </Row>
 
             </div>
             <div style={{display:'flex', justifyContent:'center'}}>
