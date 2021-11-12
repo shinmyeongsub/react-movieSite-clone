@@ -56,6 +56,7 @@ function LandingPage() {
                 {Moives && Moives.map((movie, index) => (
                     <React.Fragment key={index}>
                          <GridCards 
+                            landingPage
                             image={`${IMAGE_BASE_URL}w500${movie.poster_path}`}
                             movieId={movie.id}
                             movieName={movie.original_title}
