@@ -16,3 +16,4 @@
 * Landing Page _ Grid Components
 * Landing Page _ Load More
 * Detail Page _ Movie Info
+* Detail Page _ Favorite Button
