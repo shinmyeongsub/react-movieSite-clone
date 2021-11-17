@@ -17,3 +17,4 @@
 * Landing Page _ Load More
 * Detail Page _ Movie Info
 * Detail Page _ Favorite Button
+* Detail Page _ Favorite List Add / Remove
