@@ -34,7 +34,7 @@ Detail_Page
 
 Actor_View
 
-![4](https://user-images.githubusercontent.com/83411963/142396562-a4053a8c-da4a-491c-8994-cae6873f1269.JPG
+![4](https://user-images.githubusercontent.com/83411963/142396562-a4053a8c-da4a-491c-8994-cae6873f1269.JPG)
 
 Favorite_Page
 
